@@ -10,7 +10,6 @@ export default class HolbertonCourse {
     } else {
       throw new TypeError('Length must be a number');
     }
-
     if (Array.isArray(students)) {
       this._students = students;
     } else {

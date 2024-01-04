@@ -5,27 +5,34 @@ export default class Pricing {
     this.amount = amount;
     this.currency = currency;
   }
+
   get amount() {
     return this._amount;
   }
+
   set amount(amount) {
     if (typeof amount !== 'number') {
       throw new TypeError('The amount needs to be a number');
     }
     this._amount = amount;
   }
+
   get currency() {
     return this._currency;
   }
+
   set currency(newCurrency) {
     if (!(newCurrency instanceof Currency)) {
       throw new TypeError('currency instance of Currency');
     }
+
     this._currency = newCurrency;
   }
+
   displayFullPrice() {
     return `${this._amount} ${this._currency.displayFullCurrency()}`;
   }
+
   static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
