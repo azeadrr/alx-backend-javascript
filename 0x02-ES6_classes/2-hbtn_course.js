@@ -29,7 +29,7 @@ export default class HolbertonCourse {
     this._students = this._validArray(students);
   }
 
-  // line-disable-next-lines
+  // line-disable-next-line
   _validString(value) {
     if (typeof value !== 'string') {
       throw new TypeError('Name must be a string');
@@ -38,7 +38,7 @@ export default class HolbertonCourse {
     }
   }
 
-  // line-disable-next-lines
+  // line-disable-next-line
   _validNumber(value) {
     if (typeof value !== 'number') {
       throw new TypeError('Length must be a number');
@@ -47,7 +47,7 @@ export default class HolbertonCourse {
     }
   }
 
-  // line-disable-next-lines
+  // line-disable-next-line
   _validArray(arr) {
     if (!Array.isArray(arr) || arr.some((item) => typeof item !== 'string')) {
       throw new TypeError('Students must be an array of strings');
