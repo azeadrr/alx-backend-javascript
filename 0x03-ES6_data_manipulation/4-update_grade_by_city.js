@@ -3,8 +3,8 @@ export default function updateStudentGradeByCity(List, city, newGrades) {
     return [];
   }
   const cityFilter = List.filter((std) => std.location === city).map((std) => {
-    const grad = newGrades.find((grad) => grad.studentId === std.id);
-    return { ...std, grad: grad ? grad.grad : 'N/A' };
+    const grade = newGrades.find((grade) => grade.studentId === std.id);
+    return { ...std, grade: grade ? grade.grade : 'N/A' };
   });
 
   return cityFilter;
