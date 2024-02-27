@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 //Reading a file synchronously with Node JS
 const { readFileSync } = require('fs');
+
 const delimeter = '\n';
 
 function countStudents(dbPath) {
@@ -9,7 +10,6 @@ function countStudents(dbPath) {
     students = students.split(delimeter);
     students = students.slice(1, students.length - 1);
     const courses = new Map();
-
 
     students.forEach((student) => {
       const studentData = student.split(',');
@@ -35,5 +35,4 @@ function countStudents(dbPath) {
     throw new Error('Cannot load the database');
   }
 }
-
 module.exports = countStudents;
